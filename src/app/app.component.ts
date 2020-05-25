@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'even-odd-game';
+  oddNumbers: number[]=[];
+  evenNumbers: number[]=[];
+
+
+  onIntervalFired(firednumber: number){
+    if(firednumber % 2 === 0){
+      this.evenNumbers.push(firednumber);
+    }
+    else{
+      this.oddNumbers.push(firednumber);
+    }
+  }
 }
